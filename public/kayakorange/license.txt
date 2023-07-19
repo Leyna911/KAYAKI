@@ -1,0 +1,11 @@
+Model Information:
+* title:	Kayak with Paddle
+* source:	https://sketchfab.com/3d-models/kayak-with-paddle-cda3354816af4a0aa1ca5cfee6c5dcd7
+* author:	nayangway (https://sketchfab.com/nayangway)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Kayak with Paddle" (https://sketchfab.com/3d-models/kayak-with-paddle-cda3354816af4a0aa1ca5cfee6c5dcd7) by nayangway (https://sketchfab.com/nayangway) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
