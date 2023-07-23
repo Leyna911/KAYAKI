@@ -7,7 +7,7 @@ import { KayakCanvas } from './canvas'
 
 const Hero = () => {
   return (
-    <section className=' flex flex-row    mx-24 justify-center items-center gap-10'>
+    <section className=' flex xl:flex-row flex-col    mx-24 justify-center items-center gap-7'>
       <div>
         <h1 className={`${styles.herHeadText} text-black  `}>
           It's <span className='text-[#FEC600]' >summer</span> Let's enjoy it ! 
