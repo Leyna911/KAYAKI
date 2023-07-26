@@ -3,6 +3,10 @@ import{
     rent,
     booking,
     planning,
+    itiwit,
+    kissp,
+    sevlor,
+    attack
 } from "../assets"
 
 
@@ -50,4 +54,23 @@ export const navLinks = [
 
     ];
 
-export {services}
+
+    const products = [
+        {
+            name:"ITIWIT",
+            description:"Kayak gonflable randonnee x100+ 4 places",
+            image:sevlor
+
+        },
+        {
+            name:"ITIWIT",
+            description:"Canoe kayak gonflable randonnee fond haute pression drop stitch x100+ 2 places",
+            image:kissp
+        },
+        {
+            name:"ITIWIT",
+            description:"Canoë gonflable drop stitch haute pression x500 4 places (2 adultes + 2 enfants)",
+            image:sevlor,
+        }
+    ];
+export {services,products}

@@ -5,6 +5,11 @@ import kayak from "./offer/kayak.png";
 import rent from "./offer/salary.png";
 import booking from "./offer/booking.png";
 import planning from "./offer/planning.png";
+import itiwit from "./Display/itiwit.png";
+import kissp from "./Display/kissp.png";
+import sevlor from "./Display/sevlor.png"
+import attack from "./Display/attack.png";
+
 
 export{
     logo,
@@ -14,5 +19,10 @@ export{
     rent,
     booking,
     planning,
+    itiwit,
+    kissp,
+    sevlor,
+    attack,
+    
     
 }

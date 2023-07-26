@@ -14,7 +14,7 @@ const OffersCard =({index, title,icon,parag})=>{
         <Tilt className='xs:w-[250px] w-full'>
         <motion.div
             variants={fadeIn("right",'spring',index*0.5, 0.75)}
-            className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+            className='w-full violet-gradient p-[1px] rounded-[20px] shadow-card'
         >
             <div
                 options={{
@@ -29,9 +29,9 @@ const OffersCard =({index, title,icon,parag})=>{
                     alt='KAYAKI Services'
                     className='w-16 h-16 object-contain'
                 />
-                <h3 className='text-white text-[20px] font-bold text-center '>
+                <p className=' flex flex-wrap text-[#010101] text-[18px] font-medium text-center '>
                     {title}
-                </h3>
+                </p>
             </div>
         </motion.div>
     </Tilt>
