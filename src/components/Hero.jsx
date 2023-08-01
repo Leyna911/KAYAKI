@@ -16,10 +16,10 @@ const Hero = () => {
           Need a good plan for your next activity ? Go ahead and rent a KAYAK
         </p>
         <div className='flex flex-row gap-3'>
-          <button class="bg-[#F3BE00] hover:bg-[#daaa00] text-white font-bold py-3 px-5 my-5 rounded">
+          <button className="bg-[#F3BE00] hover:bg-[#daaa00] text-white font-bold py-3 px-5 my-5 rounded">
               Explore
           </button>
-          <button class="bg-[#afafaf] hover:bg-[#747474] text-white font-bold py-3 px-5 my-5 rounded">
+          <button className="bg-[#afafaf] hover:bg-[#747474] text-white font-bold py-3 px-5 my-5 rounded">
               Contact
           </button>
         </div>

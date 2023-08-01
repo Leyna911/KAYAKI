@@ -6,7 +6,10 @@ import{
     itiwit,
     kissp,
     sevlor,
-    attack
+    attack,
+    sun,
+    rain,
+    cloudy
 } from "../assets"
 
 
@@ -73,4 +76,46 @@ export const navLinks = [
             image:sevlor,
         }
     ];
-export {services,products}
+
+    const bookingproducts=[
+        {
+            name:"ITIWIT",
+            description:"Kayak gonflable randonnee x100+ 4 places",
+            image:sevlor,
+            price:"2000DZD"
+        },
+        {
+            name:"ITIWIT",
+            description:"Kayak gonflable randonnee x100+ 4 places",
+            image:sevlor,
+            price:"2000DZD"
+        },
+        {
+            name:"ITIWIT",
+            description:"Kayak gonflable randonnee x100+ 4 places",
+            image:sevlor,
+            price:"2000DZD"
+        },
+        {
+            name:"ITIWIT",
+            description:"Kayak gonflable randonnee x100+ 4 places",
+            image:sevlor,
+            price:"2000DZD"
+        }
+    ];
+
+    const weatherState =[
+        {
+            state:"It's A Beautiful Day For an outdoor activity!",
+            icon:sun,
+        },
+        {
+            state:"Rrrrr You should stay safe today and avoid outdoor activities",
+            icon:rain
+        },
+        {
+            state:"A little bit cloudy but the waves will be gentle",
+            icon:sun
+        },
+    ]
+export {services,products,bookingproducts,weatherState}

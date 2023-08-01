@@ -11,7 +11,7 @@ const Kayak = ({isMobile}) => {
     const kayak = useGLTF("./kayakorange/scene.gltf")
   return (
     <mesh>
-        <hemisphereLight intensity={0.15} groundColor='black'/>
+        <hemisphereLight intensity={3.5} groundColor='black'/>
         <spotLight
             position={[5,5,5]}
             angle={5.12}

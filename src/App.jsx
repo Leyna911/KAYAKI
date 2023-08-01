@@ -1,32 +1,21 @@
 import { BrowserRouter,Routes,Route } from "react-router-dom"
-import {Navbar,Hero,Picker,Offers} from "./components"
-import { CardCanvas } from "./components"
+import Home from "./components/pages/Home"
+import Navbar from "./components/Navbar"
+import ResultPage from "./components/pages/ResultPage"
+
+
+
 
 function App() {
   
 
   return (
-    <BrowserRouter>
-    <div className="relative z-0 bg-primary">
-      <div className="relative z-100  ">
-          <Navbar/>   
-      </div >
-      
-      <div className=" py-24">
-        <Hero />
-        <Picker />
-      </div>   
-        <Offers />
-        <CardCanvas/>
-      </div>
-      
-      
-      
-      
-
-      
-      
-    
+    <BrowserRouter> 
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="resultPage" element={<ResultPage/>}/>
+      </Routes>
     </BrowserRouter>
   )
 }

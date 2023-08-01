@@ -5,7 +5,8 @@ import Offers from "./Offers";
 import CardCanvas from "./Card";
 import { KayakCanvas,SunCanvas } from "./canvas";
 
-
+import ResultCanvas from "./Result";
+import Weather from "./Weather";
 
 export {
     Hero,
@@ -15,5 +16,8 @@ export {
     SunCanvas,
     Offers,
     CardCanvas,
+    ResultCanvas,
+    Weather,
+    
     
 }
