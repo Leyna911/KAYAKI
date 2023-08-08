@@ -15,12 +15,13 @@ const Home = () => {
         </div >
         
         <div className=" py-24">
-          <Hero />
+          <section id='about'><Hero /></section>
           <Picker />
+          
         </div>   
           <Offers />
-          <CardCanvas/>
-      </div>
+          <section id='kayak'><CardCanvas/></section>
+        </div>
   )
 }
 

@@ -8,7 +8,12 @@ import CanvasLoader from "../Loader";
 
 
 const Kayak = ({isMobile}) => {
-    const kayak = useGLTF("./kayakorange/scene.gltf")
+    const kayak = useGLTF("./kayakorange/scene.gltf");
+
+    console.log("isMobile:", isMobile);
+        console.log("Initial kayak.scene.scale:", kayak.scene.scale);
+        console.log("Computed scale:", isMobile ? 0.2 : 5.75);
+    
   return (
     <mesh>
         <hemisphereLight intensity={3.5} groundColor='black'/>
@@ -20,10 +25,11 @@ const Kayak = ({isMobile}) => {
             shadow-mapSize={1024}
         />
         <pointLight intensity={1}/>
+        
         <primitive
             object={kayak.scene}
-            scale={isMobile ? 3.2 : 5.75}
-            position={isMobile ? [0 , -3 , -2.2] : [0 , -3.25 ,-1.5]}
+            scale={isMobile ? 3.2 : 4.75}
+            position={isMobile ? [0 , 0 , -1] : [0 , -2 ,-1.5]}
             rotation={[-0.01, -0.2,-0.1]}
             
             
@@ -57,7 +63,7 @@ const KayakCanvas =()=>{
             frameloop="demand"
             shadows
             dpr={[1,2]}
-            camera={{position: [20,3,5], fov: 25}}
+            camera={{position: [22,3,5], fov: 25}}
             gl={{preserveDrawingBuffer: true}}
 
         >
@@ -67,7 +73,7 @@ const KayakCanvas =()=>{
                 maxPolarAngle={Math.PI/2}
                 minPolarAngle={Math.PI/2}
             />
-            <Kayak/>
+            <Kayak isMobile={isMobile}/>
             </Suspense>
             <Preload all/>
         </Canvas>

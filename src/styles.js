@@ -1,8 +1,8 @@
 const styles = {
     herHeadText:
-    "font-black text-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2",
+    "font-black text-black lg:text-[60px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[80px] mt-2",
     herSubText: 
-    "text-[#dfd9ff] font-medium lg:text-[28px] sm:text-[24px] xs:text-[18px] text-[16px] lg:leading-[40px]",
+    "text-[#676767] font-medium lg:text-[18px] sm:text-[24px] xs:text-[18px] text-[16px] lg:leading-[28px]",
 
     sectionHeadText:
     " flex justify-center text-black font-black md:text-[50px] sm:text-[50px] xs:text-[40px] text-[30px] ",

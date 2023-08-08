@@ -4,9 +4,17 @@ import { DatePicker } from '@mui/x-date-pickers';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import DropDownMenu from './DropDownMenu';
+import { useNavigate } from 'react-router-dom';
+
 
 
 const Picker = () => {
+  const navigate = useNavigate();
+
+  const handleSearchOnClick=()=>{
+    navigate('/resultPage');
+  }
+
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
     <div className='flex flex-center justify-center '>
@@ -27,6 +35,7 @@ const Picker = () => {
           <button
             type="button"
             className="focus:outline-none text-white-600 bg-[#6A2AF7] hover:bg-[#6A2AF7] focus:ring-4 focus:ring-[#6A2AF7] font-medium rounded-lg text-sm h-[55px] w-[150px] mt-8 dark:bg-[#6A2AF7]:hover:bg-[#6A2AF7] dark:focus:ring-[#6A2AF7] !important"
+            onClick={handleSearchOnClick}
           >
               Search Kayak
           </button>

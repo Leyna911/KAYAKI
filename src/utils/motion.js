@@ -1,3 +1,5 @@
+import { scroller } from "react-scroll";
+
 export const textVariant = (delay) => {
     return {
       hidden: {
@@ -86,3 +88,15 @@ export const textVariant = (delay) => {
       },
     };
   };
+
+  //function to handle smooth scrolling to a section 
+
+  export const scrollToSection =(sectionId,setActive)=>{
+    setActive(sectionId);
+    scroller.scrollTo(sectionId,{
+      duration:500,
+      delay:0,
+      smooth:'easeInOutQuart',
+      
+    })
+  }
