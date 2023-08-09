@@ -19,7 +19,7 @@ const Home = () => {
           <Picker />
           
         </div>   
-          <Offers />
+          <section id='services'><Offers /></section>
           <section id='kayak'><CardCanvas/></section>
         </div>
   )

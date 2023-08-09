@@ -4,16 +4,23 @@ import { styles } from '../styles'
 import { motion } from 'framer-motion'
 import { KayakCanvas } from './canvas'
 
-import { scroller } from 'react-scroll'
+import { scrollToSection } from '../utils/motion'
+import { useNavigate } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 
 const Hero = () => {
-
-  const [active,setActive]=useState();
-
-  const scrollToSection=()=>{
-    
-  }
   
+  const [active, setActive] = useState('');
+  const handleButtonClicked=(sectionId)=>{
+    setActive(sectionId)
+    scrollToSection(sectionId,setActive)
+}
+
+  const navigate = useNavigate(); 
+
+  const handleContactClicked=()=>{
+    navigate('/resultPage#contactSection')
+  }
   return (
     <section className=' flex xl:flex-row flex-col    mx-20 justify-center items-center gap-7'>
       <div>
@@ -24,16 +31,18 @@ const Hero = () => {
           Need a good plan for your next activity ? Go ahead and rent a <span className='text-[#d8a900]'>KAYAK</span> 
         </p>
         <div className='flex flex-row gap-3'>
-          <button className="bg-[#F3BE00] hover:bg-[#daaa00] text-white font-bold py-3 px-5 my-5 rounded">
+          <button
+           onClick={()=>handleButtonClicked('services')} 
+          className="bg-[#F3BE00] hover:bg-[#daaa00] text-white font-bold py-3 px-5 my-5 rounded">
               Explore
           </button>
-         
+          <HashLink to="/resultPage#contactSection" smooth>
             <button  
             className="bg-[#afafaf] hover:bg-[#747474] text-white font-bold py-3 px-5 my-5 rounded" 
-            
             >
                 Contact
             </button>
+            </HashLink>
           
         </div>
       </div>

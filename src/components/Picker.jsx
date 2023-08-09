@@ -17,8 +17,8 @@ const Picker = () => {
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-    <div className='flex flex-center justify-center '>
-      <div className=' flex flex-row items-center justify-center p-4 rounded-lg w-[1000px] h-[120px] border border-[#FEC600] gap-5 shadow-lg '>
+    <div className='flex  flex-center justify-center '>
+      <div className=' flex sm:flex-row flex-col  items-center justify-center p-4 rounded-lg w-[1000px]  sm:h-[120px] h-[600px] border border-[#FEC600] gap-5 shadow-lg '>
         <div className='flex-col justify-start '>
           <h3 className='text-[#3f3f3f] mb-3'>Pick Up Date</h3>
          <DatePicker/>

@@ -9,12 +9,19 @@ import Contact from '../Contact';
 const ResultPage = () => {
   return (
     <div className='bg-primary'>
-
+      <div className='mt-[20px]'>
         <Picker/>
+        </div>
         <Weather/>
-    <div className=' h-[2000px] mt-[100px] justify-center '>
-      <ResultCanvas/>
-    </div>
+        <section id='resultCanvasSection'>
+          <div className=' h-auto mt-[100px] justify-center '>
+            <ResultCanvas/>
+          </div>
+        </section>
+    <section id='contactSection'>
+      <Contact/>
+    </section>
+    
     
     </div>
   )

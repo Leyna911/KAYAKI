@@ -7,6 +7,7 @@ import { styles } from '../styles'
 import { products } from '../constants'
 import { Tilt } from 'react-tilt'
 import { textVariant,fadeIn } from '../utils/motion'
+import { HashLink } from 'react-router-hash-link'
 
 
 
@@ -21,9 +22,11 @@ const Card = ({index,name,description,image}) => {
     <div className="p-5">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">{name}</h5>
         <p className="mb-10 font-normal text-gray-700 dark:text-gray-400">{description}</p>
-        <button href="#" className="absolute bottom-5  items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#6A2AF7] rounded-lg hover:bg-[#6A2AF7] focus:ring-4 focus:outline-none focus:bg-[#6A2AF7] dark:bg-[#6A2AF7] dark:hover:bg-[#6A2AF7] dark:focus:ring-[#6A2AF7]">
-            Discover 
-        </button>
+        <HashLink to="/resultPage#resultCanvasSection" smooth>
+            <button href="#" className="absolute bottom-5  items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#6A2AF7] rounded-lg hover:bg-[#6A2AF7] focus:ring-4 focus:outline-none focus:bg-[#6A2AF7] dark:bg-[#6A2AF7] dark:hover:bg-[#6A2AF7] dark:focus:ring-[#6A2AF7]">
+                Discover 
+            </button>
+        </HashLink>
     </div>
     
 </motion.div>
