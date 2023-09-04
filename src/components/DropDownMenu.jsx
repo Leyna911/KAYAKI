@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 
-const DropDownMenu = () => {
+const DropDownMenu = ({selectedKayakArea, setSelectedKayakArea}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleOptionClick= (value)=>{
+    setSelectedKayakArea(value);
+    setIsOpen(false)
+  }
 
   return (
     <div>
@@ -13,9 +18,9 @@ const DropDownMenu = () => {
         id="dropdownDefaultButton"
         onClick={toggleDropdown} 
         className="text-[#4d4d4d] bg-[#ffffff] border border-[#8a8a8a] hover:bg-[#6A2AF7] focus:ring-4 focus:outline-none focus:ring-[#6A2AF7] font-medium rounded-lg text-sm px-10 py-4 text-center inline-flex items-center dark:bg-[#ffffff] dark:hover:bg-[#6A2AF7] dark:focus:ring-[#FFF7F5-800"
-        type="button"
-      >
-        Kayak Area
+        type='button'
+     >
+        {selectedKayakArea || 'Kayak Area'}
         <svg
           className="w-2.5 h-2.5 ml-2.5"
           aria-hidden="true"
@@ -40,24 +45,32 @@ const DropDownMenu = () => {
       >
         <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
           <li>
-            <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <button 
+            onClick={()=>handleOptionClick('Algiers')}
+            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
               Algiers
-            </a>
+            </button>
           </li>
           <li>
-            <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <button 
+            onClick={()=>handleOptionClick('Tipaza')}
+            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
               Tipaza
-            </a>
+            </button>
           </li>
           <li>
-            <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <button 
+            onClick={()=>handleOptionClick('Boumerdas')}
+            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
               Boumerdas
-            </a>
+            </button>
           </li>
           <li>
-            <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <button 
+            onClick={()=>handleOptionClick('Oran')}
+            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
               Oran
-            </a>
+            </button>
           </li>
         </ul>
       </div>

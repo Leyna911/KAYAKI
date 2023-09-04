@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Navbar from '../Navbar'
 import Hero from '../Hero'
@@ -7,7 +7,11 @@ import Offers from '../Offers'
 import CardCanvas from '../Card'
 
 
+
 const Home = () => {
+
+  
+  
   return (
     <div className="relative z-0 bg-primary">
         <div className="relative z-100  ">
