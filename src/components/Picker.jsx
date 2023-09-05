@@ -1,22 +1,38 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SectionsWrapper from '../hoc/SectionsWrapper'; 
 import { DatePicker } from '@mui/x-date-pickers';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
+import dayjs from 'dayjs';
 import DropDownMenu from './DropDownMenu';
 import { useNavigate } from 'react-router-dom';
+
 import { useState } from 'react';
 
+
+
 const Picker = () => {
+
+  
   const navigate = useNavigate();
   const [selectedKayakArea,setSelectedKayakArea]=useState('');
+  const [pickupDate, setPickupDate] = useState(localStorage.getItem('pickupDate') || '');
+  const [droppingDate, setDroppingDate] = useState(localStorage.getItem('droppingDate') || '');
 
 
-  const handleSearchKayak=()=>{
-    if(selectedKayakArea){
+
+  useEffect(()=>{
+    localStorage.setItem('pickupDate',pickupDate);
+    localStorage.setItem('droppingDate',droppingDate)
+  },[pickupDate,droppingDate])
+
+  
+  const handleSearchKayak = () => {
+    if (selectedKayakArea) {
       navigate(`/resultPage?location=${selectedKayakArea}`);
     }
-  }
+  };
+  
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -24,11 +40,17 @@ const Picker = () => {
       <div className=' flex sm:flex-row flex-col  items-center justify-center p-4 rounded-lg w-[1000px]  sm:h-[120px] h-[600px] border border-[#FEC600] gap-5 shadow-lg '>
         <div className='flex-col justify-start '>
           <h3 className='text-[#3f3f3f] mb-3'>Pick Up Date</h3>
-         <DatePicker/>
+         <DatePicker 
+          value={dayjs(pickupDate)}
+          onChange={(date)=>setPickupDate(date)}
+         />
         </div>
         <div className='flex-col justify-start '>
         <h3 className='text-[#3f3f3f] mb-3'>Dropping Date</h3>
-         <DatePicker/>
+         <DatePicker
+          value={dayjs(droppingDate)}
+          onChange={(date)=>setDroppingDate(date)}
+         />
         </div>
         <div className=''>
           <h3 className=' text-[#3f3f3f] mb-3'>PickUp Location</h3>

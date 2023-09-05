@@ -3,19 +3,18 @@ import Home from "./components/pages/Home"
 import Navbar from "./components/Navbar"
 import ResultPage from "./components/pages/ResultPage"
 import Offers from "./components/Offers"
-
+import { useState } from "react"
 
 
 function App() {
-  
+ 
 
   return (
     <BrowserRouter> 
       <Navbar/>
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="resultPage" element={<ResultPage/>}/>
-
+        <Route path="/" element={<Home />}/>
+        <Route path="resultPage" element={<ResultPage />}/>
         <Route path="servicesSection " element={<Offers/>}/>
       </Routes>
     </BrowserRouter>

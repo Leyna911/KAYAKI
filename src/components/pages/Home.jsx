@@ -9,8 +9,6 @@ import CardCanvas from '../Card'
 
 
 const Home = () => {
-
-  
   
   return (
     <div className="relative z-0 bg-primary">

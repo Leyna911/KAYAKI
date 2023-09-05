@@ -10,11 +10,11 @@ import { useLocation } from 'react-router-dom';
 const ResultPage = () => {
   const location = useLocation();
   const selectedLocation = new URLSearchParams(location.search).get('location')
-  
+ 
   return (
     <div className='bg-primary'>
       <div className='mt-[20px]'>
-        <Picker/>
+        <Picker />
         </div>
         <Weather selectedLocation={selectedLocation}/>
         <section id='resultCanvasSection'>
