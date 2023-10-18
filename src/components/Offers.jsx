@@ -9,9 +9,8 @@ import { styles } from '../styles'
 import {services} from "../constants"
 import { fadeIn,textVariant } from '../utils/motion'
 
-import { scrollToSection } from '../utils/motion'
 
-const OffersCard =({index, title,icon,parag})=>{
+const OffersCard =({index, title,icon})=>{
 
     
     return(

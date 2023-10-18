@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 
 import emailjs from "@emailjs/browser"
 
-import { styles } from '../styles'
 import SectionsWrapper from '../hoc/SectionsWrapper'
 import { slideIn } from '../utils/motion'
 
@@ -40,7 +39,7 @@ const Contact = () => {
       emailjs
         .send(
           'service_mmoqmcc',
-          'template_navc4y8',
+          'template_gmu9nah',
           {
             form_name: form.name,
             to_name:"Yousra Lina Boudchicha",

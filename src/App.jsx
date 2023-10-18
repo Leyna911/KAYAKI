@@ -3,8 +3,6 @@ import Home from "./components/pages/Home"
 import Navbar from "./components/Navbar"
 import ResultPage from "./components/pages/ResultPage"
 import Offers from "./components/Offers"
-import { useState } from "react"
-
 
 function App() {
  

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { styles } from '../styles'
 
-import { motion } from 'framer-motion'
 import { KayakCanvas } from './canvas'
 
 import { scrollToSection } from '../utils/motion'
@@ -18,9 +17,7 @@ const Hero = () => {
 
   const navigate = useNavigate(); 
 
-  const handleContactClicked=()=>{
-    navigate('/resultPage#contactSection')
-  }
+  
   return (
     <section className=' flex xl:flex-row flex-col    mx-20 justify-center items-center gap-7'>
       <div>

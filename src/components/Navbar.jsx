@@ -3,7 +3,6 @@ import { Link} from 'react-router-dom'
 import { styles} from '../styles'; 
 import {navLinks} from '../constants';
 import {logo,menu , close} from '../assets';
-import { scroller } from 'react-scroll';
 
 import { scrollToSection } from '../utils/motion';
 
